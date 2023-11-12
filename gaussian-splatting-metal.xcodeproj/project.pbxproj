@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A400B7252AEE9D8C00BC216D /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = A400B7242AEE9D8C00BC216D /* Camera.swift */; };
+		A44A33C52AED7AEA00720719 /* PlyFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A33C42AED7AEA00720719 /* PlyFileReader.swift */; };
+		A44A33C72AED934700720719 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = A44A33C62AED934700720719 /* Resources */; };
+		A4DC96212AD7462D003A772E /* gaussian_splatting_metalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC96202AD7462D003A772E /* gaussian_splatting_metalApp.swift */; };
+		A4DC96232AD7462D003A772E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC96222AD7462D003A772E /* ContentView.swift */; };
+		A4DC96252AD7462E003A772E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4DC96242AD7462E003A772E /* Assets.xcassets */; };
+		A4DC96282AD7462E003A772E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4DC96272AD7462E003A772E /* Preview Assets.xcassets */; };
+		A4DC96332AD7462E003A772E /* gaussian_splatting_metalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC96322AD7462E003A772E /* gaussian_splatting_metalTests.swift */; };
+		A4DC963D2AD7462E003A772E /* gaussian_splatting_metalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC963C2AD7462E003A772E /* gaussian_splatting_metalUITests.swift */; };
+		A4DC963F2AD7462E003A772E /* gaussian_splatting_metalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC963E2AD7462E003A772E /* gaussian_splatting_metalUITestsLaunchTests.swift */; };
+		A4DC964C2AD74ACA003A772E /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC964B2AD74ACA003A772E /* Renderer.swift */; };
+		A4DC964F2AD74C18003A772E /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = A4DC964E2AD74C18003A772E /* Shaders.metal */; };
+		A4EFF9F42B0038CD00FCC3CE /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EFF9F32B0038CD00FCC3CE /* MetalView.swift */; };
+		A4EFF9FC2B017ECC00FCC3CE /* point_cloud.ply in Resources */ = {isa = PBXBuildFile; fileRef = A4EFF9FB2B017ECC00FCC3CE /* point_cloud.ply */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A4DC962F2AD7462E003A772E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4DC96152AD7462D003A772E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4DC961C2AD7462D003A772E;
+			remoteInfo = "gaussian-splatting-metal";
+		};
+		A4DC96392AD7462E003A772E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4DC96152AD7462D003A772E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4DC961C2AD7462D003A772E;
+			remoteInfo = "gaussian-splatting-metal";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A400B7242AEE9D8C00BC216D /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		A44A33C42AED7AEA00720719 /* PlyFileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlyFileReader.swift; sourceTree = "<group>"; };
+		A44A33C62AED934700720719 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
+		A4DC961D2AD7462D003A772E /* gaussian-splatting-metal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gaussian-splatting-metal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4DC96202AD7462D003A772E /* gaussian_splatting_metalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gaussian_splatting_metalApp.swift; sourceTree = "<group>"; };
+		A4DC96222AD7462D003A772E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A4DC96242AD7462E003A772E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A4DC96272AD7462E003A772E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A4DC96292AD7462E003A772E /* gaussian_splatting_metal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = gaussian_splatting_metal.entitlements; sourceTree = "<group>"; };
+		A4DC962E2AD7462E003A772E /* gaussian-splatting-metalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gaussian-splatting-metalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4DC96322AD7462E003A772E /* gaussian_splatting_metalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gaussian_splatting_metalTests.swift; sourceTree = "<group>"; };
+		A4DC96382AD7462E003A772E /* gaussian-splatting-metalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gaussian-splatting-metalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4DC963C2AD7462E003A772E /* gaussian_splatting_metalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gaussian_splatting_metalUITests.swift; sourceTree = "<group>"; };
+		A4DC963E2AD7462E003A772E /* gaussian_splatting_metalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gaussian_splatting_metalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A4DC964B2AD74ACA003A772E /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		A4DC964D2AD74BD5003A772E /* definitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = definitions.h; sourceTree = "<group>"; };
+		A4DC964E2AD74C18003A772E /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		A4EFF9F32B0038CD00FCC3CE /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
+		A4EFF9FB2B017ECC00FCC3CE /* point_cloud.ply */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = point_cloud.ply; sourceTree = "<group>"; };
+		A4EFF9FD2B017ECE00FCC3CE /* point_cloud.ply */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = point_cloud.ply; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A4DC961A2AD7462D003A772E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4DC962B2AD7462E003A772E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4DC96352AD7462E003A772E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A4DC96142AD7462D003A772E = {
+			isa = PBXGroup;
+			children = (
+				A4EFF9FB2B017ECC00FCC3CE /* point_cloud.ply */,
+				A4EFF9FD2B017ECE00FCC3CE /* point_cloud.ply */,
+				A44A33C62AED934700720719 /* Resources */,
+				A4DC961F2AD7462D003A772E /* gaussian-splatting-metal */,
+				A4DC96312AD7462E003A772E /* gaussian-splatting-metalTests */,
+				A4DC963B2AD7462E003A772E /* gaussian-splatting-metalUITests */,
+				A4DC961E2AD7462D003A772E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A4DC961E2AD7462D003A772E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4DC961D2AD7462D003A772E /* gaussian-splatting-metal.app */,
+				A4DC962E2AD7462E003A772E /* gaussian-splatting-metalTests.xctest */,
+				A4DC96382AD7462E003A772E /* gaussian-splatting-metalUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4DC961F2AD7462D003A772E /* gaussian-splatting-metal */ = {
+			isa = PBXGroup;
+			children = (
+				A4DC96202AD7462D003A772E /* gaussian_splatting_metalApp.swift */,
+				A4DC96222AD7462D003A772E /* ContentView.swift */,
+				A4DC96242AD7462E003A772E /* Assets.xcassets */,
+				A4DC96292AD7462E003A772E /* gaussian_splatting_metal.entitlements */,
+				A4DC96262AD7462E003A772E /* Preview Content */,
+				A4DC964B2AD74ACA003A772E /* Renderer.swift */,
+				A4DC964D2AD74BD5003A772E /* definitions.h */,
+				A4DC964E2AD74C18003A772E /* Shaders.metal */,
+				A44A33C42AED7AEA00720719 /* PlyFileReader.swift */,
+				A400B7242AEE9D8C00BC216D /* Camera.swift */,
+				A4EFF9F32B0038CD00FCC3CE /* MetalView.swift */,
+			);
+			path = "gaussian-splatting-metal";
+			sourceTree = "<group>";
+		};
+		A4DC96262AD7462E003A772E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A4DC96272AD7462E003A772E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A4DC96312AD7462E003A772E /* gaussian-splatting-metalTests */ = {
+			isa = PBXGroup;
+			children = (
+				A4DC96322AD7462E003A772E /* gaussian_splatting_metalTests.swift */,
+			);
+			path = "gaussian-splatting-metalTests";
+			sourceTree = "<group>";
+		};
+		A4DC963B2AD7462E003A772E /* gaussian-splatting-metalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A4DC963C2AD7462E003A772E /* gaussian_splatting_metalUITests.swift */,
+				A4DC963E2AD7462E003A772E /* gaussian_splatting_metalUITestsLaunchTests.swift */,
+			);
+			path = "gaussian-splatting-metalUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A4DC961C2AD7462D003A772E /* gaussian-splatting-metal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4DC96422AD7462E003A772E /* Build configuration list for PBXNativeTarget "gaussian-splatting-metal" */;
+			buildPhases = (
+				A4DC96192AD7462D003A772E /* Sources */,
+				A4DC961A2AD7462D003A772E /* Frameworks */,
+				A4DC961B2AD7462D003A772E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "gaussian-splatting-metal";
+			productName = "gaussian-splatting-metal";
+			productReference = A4DC961D2AD7462D003A772E /* gaussian-splatting-metal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A4DC962D2AD7462E003A772E /* gaussian-splatting-metalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4DC96452AD7462E003A772E /* Build configuration list for PBXNativeTarget "gaussian-splatting-metalTests" */;
+			buildPhases = (
+				A4DC962A2AD7462E003A772E /* Sources */,
+				A4DC962B2AD7462E003A772E /* Frameworks */,
+				A4DC962C2AD7462E003A772E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4DC96302AD7462E003A772E /* PBXTargetDependency */,
+			);
+			name = "gaussian-splatting-metalTests";
+			productName = "gaussian-splatting-metalTests";
+			productReference = A4DC962E2AD7462E003A772E /* gaussian-splatting-metalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A4DC96372AD7462E003A772E /* gaussian-splatting-metalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4DC96482AD7462E003A772E /* Build configuration list for PBXNativeTarget "gaussian-splatting-metalUITests" */;
+			buildPhases = (
+				A4DC96342AD7462E003A772E /* Sources */,
+				A4DC96352AD7462E003A772E /* Frameworks */,
+				A4DC96362AD7462E003A772E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4DC963A2AD7462E003A772E /* PBXTargetDependency */,
+			);
+			name = "gaussian-splatting-metalUITests";
+			productName = "gaussian-splatting-metalUITests";
+			productReference = A4DC96382AD7462E003A772E /* gaussian-splatting-metalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A4DC96152AD7462D003A772E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					A4DC961C2AD7462D003A772E = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					A4DC962D2AD7462E003A772E = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = A4DC961C2AD7462D003A772E;
+					};
+					A4DC96372AD7462E003A772E = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = A4DC961C2AD7462D003A772E;
+					};
+				};
+			};
+			buildConfigurationList = A4DC96182AD7462D003A772E /* Build configuration list for PBXProject "gaussian-splatting-metal" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A4DC96142AD7462D003A772E;
+			productRefGroup = A4DC961E2AD7462D003A772E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4DC961C2AD7462D003A772E /* gaussian-splatting-metal */,
+				A4DC962D2AD7462E003A772E /* gaussian-splatting-metalTests */,
+				A4DC96372AD7462E003A772E /* gaussian-splatting-metalUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A4DC961B2AD7462D003A772E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4DC96282AD7462E003A772E /* Preview Assets.xcassets in Resources */,
+				A4DC96252AD7462E003A772E /* Assets.xcassets in Resources */,
+				A4EFF9FC2B017ECC00FCC3CE /* point_cloud.ply in Resources */,
+				A44A33C72AED934700720719 /* Resources in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4DC962C2AD7462E003A772E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4DC96362AD7462E003A772E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A4DC96192AD7462D003A772E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A44A33C52AED7AEA00720719 /* PlyFileReader.swift in Sources */,
+				A4EFF9F42B0038CD00FCC3CE /* MetalView.swift in Sources */,
+				A4DC964F2AD74C18003A772E /* Shaders.metal in Sources */,
+				A400B7252AEE9D8C00BC216D /* Camera.swift in Sources */,
+				A4DC96232AD7462D003A772E /* ContentView.swift in Sources */,
+				A4DC964C2AD74ACA003A772E /* Renderer.swift in Sources */,
+				A4DC96212AD7462D003A772E /* gaussian_splatting_metalApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4DC962A2AD7462E003A772E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4DC96332AD7462E003A772E /* gaussian_splatting_metalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4DC96342AD7462E003A772E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4DC963F2AD7462E003A772E /* gaussian_splatting_metalUITestsLaunchTests.swift in Sources */,
+				A4DC963D2AD7462E003A772E /* gaussian_splatting_metalUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A4DC96302AD7462E003A772E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4DC961C2AD7462D003A772E /* gaussian-splatting-metal */;
+			targetProxy = A4DC962F2AD7462E003A772E /* PBXContainerItemProxy */;
+		};
+		A4DC963A2AD7462E003A772E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4DC961C2AD7462D003A772E /* gaussian-splatting-metal */;
+			targetProxy = A4DC96392AD7462E003A772E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A4DC96402AD7462E003A772E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A4DC96412AD7462E003A772E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		A4DC96432AD7462E003A772E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "gaussian-splatting-metal/gaussian_splatting_metal.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"gaussian-splatting-metal/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andryr.gaussian-splatting-metal";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "gaussian-splatting-metal/definitions.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A4DC96442AD7462E003A772E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "gaussian-splatting-metal/gaussian_splatting_metal.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"gaussian-splatting-metal/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andryr.gaussian-splatting-metal";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "gaussian-splatting-metal/definitions.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A4DC96462AD7462E003A772E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andryr.gaussian-splatting-metalTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gaussian-splatting-metal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/gaussian-splatting-metal";
+			};
+			name = Debug;
+		};
+		A4DC96472AD7462E003A772E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andryr.gaussian-splatting-metalTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gaussian-splatting-metal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/gaussian-splatting-metal";
+			};
+			name = Release;
+		};
+		A4DC96492AD7462E003A772E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andryr.gaussian-splatting-metalUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "gaussian-splatting-metal";
+			};
+			name = Debug;
+		};
+		A4DC964A2AD7462E003A772E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andryr.gaussian-splatting-metalUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "gaussian-splatting-metal";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A4DC96182AD7462D003A772E /* Build configuration list for PBXProject "gaussian-splatting-metal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4DC96402AD7462E003A772E /* Debug */,
+				A4DC96412AD7462E003A772E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4DC96422AD7462E003A772E /* Build configuration list for PBXNativeTarget "gaussian-splatting-metal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4DC96432AD7462E003A772E /* Debug */,
+				A4DC96442AD7462E003A772E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4DC96452AD7462E003A772E /* Build configuration list for PBXNativeTarget "gaussian-splatting-metalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4DC96462AD7462E003A772E /* Debug */,
+				A4DC96472AD7462E003A772E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4DC96482AD7462E003A772E /* Build configuration list for PBXNativeTarget "gaussian-splatting-metalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4DC96492AD7462E003A772E /* Debug */,
+				A4DC964A2AD7462E003A772E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A4DC96152AD7462D003A772E /* Project object */;
+}
