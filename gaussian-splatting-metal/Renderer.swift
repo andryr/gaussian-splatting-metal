@@ -234,8 +234,8 @@ class Renderer: NSObject, MTKViewDelegate {
         let xAngle = deltaX / 200.0 * Float.pi
         let yAngle = -deltaY / 400.0 * Float.pi
 
-        camera.rotateDirectionVectorAroundUp(angle: xAngle)
-        camera.rotateDirectionVectorAroundRight(angle: yAngle)
+        camera.rotateHorizontally(angle: xAngle, pivot: camera.position + camera.getDirection() * 4.0)
+        camera.rotateVertically(angle: yAngle, pivot: camera.position + camera.getDirection() * 4.0)
         
         updateViewMatrix()
     }

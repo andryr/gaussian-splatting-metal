@@ -41,7 +41,7 @@ class Camera {
         return normalize(simd_float3(rot0[2], rot1[2], rot2[2]))
     }
     
-    func rotateDirectionVectorAroundUp(angle: Float) {
+    func rotateHorizontally(angle: Float, pivot: simd_float3) {
         let right = getRight()
         let up = getUp()
         let direction = getDirection()
@@ -67,9 +67,14 @@ class Camera {
         rot0[2] = newDirection.x
         rot1[2] = newDirection.y
         rot2[2] = newDirection.z
+        
+        let toPivot = pivot - position
+        let newPosition = pivot - newDirection * length(toPivot)
+        position = newPosition
+        
     }
     
-    func rotateDirectionVectorAroundRight(angle: Float) {
+    func rotateVertically(angle: Float, pivot: simd_float3) {
         let right = getRight()
         let up = getUp()
         let direction = getDirection()
@@ -93,6 +98,10 @@ class Camera {
         rot0[2] = newDirection.x
         rot1[2] = newDirection.y
         rot2[2] = newDirection.z
+        
+        let toPivot = pivot - position
+        let newPosition = pivot - newDirection * length(toPivot)
+        position = newPosition
     }
     
     func resetToHorizontal() {
